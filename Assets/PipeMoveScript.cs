@@ -13,8 +13,7 @@ public class PipeMoveScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
-        moveSpeed = (logic.playerScore)+5;*/
+        
     }
 
     // Update is called once per frame

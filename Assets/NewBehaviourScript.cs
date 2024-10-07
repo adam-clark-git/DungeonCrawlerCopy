@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class NewBehaviourScript : MonoBehaviour
 {
@@ -18,10 +19,22 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        
+        
+        
+        
         //if ()
         if (Input.GetKeyDown(KeyCode.Space) == true && birdIsAlive)
         {
             myRigidBody.velocity = Vector2.up * flapStrength;
+            
+            
+        }
+        if (transform.position.y > 15 || transform.position.y < -15)
+        {
+            logic.GameOver();
+            birdIsAlive = false;
         }
 
     }

@@ -9,11 +9,19 @@ public class LogicScript : MonoBehaviour
     public int playerScore;
     public Text score;
     public GameObject gameOverScreen;
+    public NewBehaviourScript birdScript;
+    public AudioSource blipSound;
     [ContextMenu("Increase Score")]
     public void AddScore(int scoreAdded)
     {
-        playerScore += scoreAdded;
-        score.text = playerScore.ToString();
+        
+        if (birdScript.birdIsAlive)
+        {
+            playerScore += scoreAdded;
+            score.text = playerScore.ToString();
+            blipSound.Play();
+        }
+        
     }
     public void restartGame()
     {
